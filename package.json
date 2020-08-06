@@ -17,6 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "server": "node api/server.js",
     "db:refresh": "node db/scripts/setup.js && node db/scripts/seed.js 100"
   },
   "eslintConfig": {
@@ -36,5 +37,6 @@
   },
   "devDependencies": {
     "faker": "^4.1.0"
-  }
+  },
+  "proxy": "http://localhost:8000"
 }

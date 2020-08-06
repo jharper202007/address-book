@@ -22,7 +22,8 @@ db.run(`CREATE TABLE contacts (
   last_name VARCHAR(64) NOT NULL,
   email VARCHAR(255),
   created_at DATETIME,
-  updated_at DATETIME
+  updated_at DATETIME,
+  deleted_at DATETIME
 )`);
 
 db.close()

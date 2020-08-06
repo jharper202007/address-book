@@ -35,11 +35,11 @@ contacts.forEach(contact => {
   const { id, first_name, last_name, email } = contact;
   const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
 
-  const values = [id, first_name, last_name, email, timestamp, null];
+  const values = [id, first_name, last_name, email, timestamp];
   // For simplicity I'm just creating a new INSERT statement for each row
   // instead of batching them
   const sql = (
-    `INSERT INTO contacts(id, first_name, last_name, email, created_at, updated_at)
+    `INSERT INTO contacts(id, first_name, last_name, email, created_at)
     VALUES (${values.map(val => `"${val}"`).join(',')});`
   );
 
