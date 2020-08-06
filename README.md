@@ -2,7 +2,6 @@
 
 - `npm install` to install dependencies
 - `npm run server` will run the API at `http://localhost:8000`
-- Available API endpoints are `/devices`, `/devices/:id`, `/devices/:id/connections`
 - `npm run start` will run the React app at `http://localhost:3000`
 - `npm run test` will run test suite
 
