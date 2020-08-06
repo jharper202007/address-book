@@ -4,7 +4,7 @@
 - `npm run server` will run the API at `http://localhost:8000`
 - Available API endpoints are `/devices`, `/devices/:id`, `/devices/:id/connections`
 - `npm run start` will run the React app at `http://localhost:3000`
-- `npm run db:refresh` will re-seed database
+- `npm run test` will run test suite
 
 ### Available Endpoints
 - `GET /contacts` - List all contacts
@@ -14,4 +14,5 @@
 - `DELETE /contacts/1` - Delete a user. (Uses soft-deletes: record is not completely removed)
 
 ### Notes
-- A pre-populated sqlite database file is already included in the repo and is ready to use. The DB seed & set up files were left in to show how they were created though.
+- A pre-populated sqlite database file is already included in the repo and is ready to use. The DB seed & set up files were left in to show how they were created though. `npm run db:refresh` can be run to re-seed the database
+
