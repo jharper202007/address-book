@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import DeleteContactButton from '../DeleteContactButton';
 
 const ContactListItem = ({ contact }) => {
-  console.log(contact)
-  const [isDeleted, setIsDeleted] = useState(contact.deleted_at !==  null);
+  const [isDeleted, setIsDeleted] = useState(!!contact.deleted_at);
 
   return (
     <tr className={isDeleted ? 'is-deleted' : ''}>
@@ -17,12 +16,9 @@ const ContactListItem = ({ contact }) => {
       </td>
 
       <td>
-        <div className="btn-group">
-          {!isDeleted && (
-            <DeleteContactButton contactId={contact.id} onDelete={() => setIsDeleted(true)} />
-          )}
-        </div>
-
+        {!isDeleted && (
+          <DeleteContactButton contactId={contact.id} onDelete={() => setIsDeleted(true)} />
+        )}
       </td>
     </tr>
   );
