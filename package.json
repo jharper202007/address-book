@@ -17,7 +17,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "refresh": "node db/setup.js && node db/seed.js 100"
+    "db:refresh": "node db/scripts/setup.js && node db/scripts/seed.js 100"
   },
   "eslintConfig": {
     "extends": "react-app"
