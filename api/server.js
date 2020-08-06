@@ -41,7 +41,7 @@ app.get('/search', (req, res) => {
 })
 
 // Soft delete user
-app.delete('/delete/:id', (req, res) => {
+app.delete('/contacts/:id', (req, res) => {
   const DELETE_QUERY = query('contacts/delete_contact');
   const timestamp = new Date().toISOString().replace('T', ' ').substring(0, 19);
   db.all(DELETE_QUERY, [timestamp, req.params.id], (err) => {
