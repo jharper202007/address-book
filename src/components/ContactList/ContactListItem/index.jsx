@@ -3,7 +3,8 @@ import React, { useState } from 'react';
 import DeleteContactButton from '../DeleteContactButton';
 
 const ContactListItem = ({ contact }) => {
-  const [isDeleted, setIsDeleted] = useState(false);
+  console.log(contact)
+  const [isDeleted, setIsDeleted] = useState(contact.deleted_at !==  null);
 
   return (
     <tr className={isDeleted ? 'is-deleted' : ''}>
