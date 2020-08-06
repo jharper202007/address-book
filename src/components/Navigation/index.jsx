@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 
 const Navigation = () => {
   const [searchTerm, setSearchTerm] = useState('');
